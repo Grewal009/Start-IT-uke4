@@ -12,10 +12,14 @@
 }
 
 .meter3::-webkit-meter-optimum-value {
-  background: rgb(235, 83, 108);
+  background: rgb(221, 67, 149);
 }
 
-.food1 {
+.meter4::-webkit-meter-optimum-value {
+  background: rgba(45, 213, 211, 0.973);
+}
+
+.label {
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -62,4 +66,17 @@ p {
   justify-content: center;
   align-items: center;
   height: 90vh;
+}
+.btnServe {
+  width: 100px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  border: solid 0px transparent;
+  cursor: pointer;
+  background-color: rgb(245, 222, 193);
+  color: brown;
+  font-weight: 600;
+}
+.btnServe:hover {
+  background-color: rgb(230, 182, 121);
 }
