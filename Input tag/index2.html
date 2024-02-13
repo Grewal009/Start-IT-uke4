@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change bg-color using radio button</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      //change background-color by using radio button
+      const root = document.querySelector("#root");
+      let color;
+
+      updateView();
+      function updateView() {
+        root.innerHTML =
+          /*HTML*/
+          `
+      <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptas neque temporibus maxime iusto exercitationem quia nobis. Deserunt, magni pariatur.</p>
+        <input
+      type="radio"
+      name="color"
+      value="lightblue"
+      onchange="changeBgColor(this)"
+    />lightblue<br />
+    <input
+      type="radio"
+      name="color"
+      value="lightgreen"
+      onchange="changeBgColor(this)"
+    />lightgreen<br />
+    <input
+      type="radio"
+      name="color"
+      value="lightpink"
+      onchange="changeBgColor(this)"
+    />lightpink<br />
+      `;
+      }
+
+      function changeBgColor(ele) {
+        color = ele.value;
+        console.log(color);
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

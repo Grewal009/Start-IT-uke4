@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark mode</title>
+    <style>
+      .dark {
+        background-color: rgb(19, 18, 18);
+        color: rgb(239, 234, 224);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      //Dark mode using checkbox
+      //modal
+      const root = document.querySelector("#root");
+      let isDarkMode;
+
+      updateView();
+
+      //view
+      function updateView() {
+        root.innerHTML =
+          /*HTML*/
+          `
+        <h1>Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptas neque temporibus maxime iusto exercitationem quia nobis. Deserunt, magni pariatur.</p>
+        <input type="checkbox" onchange="isDarkMode=this.checked; changeMode()" />Dark mode
+        `;
+      }
+
+      //controller
+      function changeMode() {
+        console.log(isDarkMode);
+        // isDarkMode = !isDarkMode ? true : false;
+
+        isDarkMode
+          ? document.body.classList.add("dark")
+          : document.body.classList.remove("dark");
+      }
+    </script>
+  </body>
+</html>
